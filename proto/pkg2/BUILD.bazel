@@ -1,0 +1,8 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
+proto_library(
+    name = "test2_proto",
+    srcs = ["test2.proto"],
+    visibility = ["//visibility:public"],
+    deps = ["//proto/pkg1:foo_proto"],
+)

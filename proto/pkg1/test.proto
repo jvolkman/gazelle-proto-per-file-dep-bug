@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package proto.pkg1;
+
+import "proto/pkg1/foo.proto";
+
+message Test {
+    Foo foo = 1;
+}

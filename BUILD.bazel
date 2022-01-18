@@ -1,0 +1,18 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@bazel_gazelle//:def.bzl", "gazelle", "gazelle_binary")
+
+gazelle_binary(
+    name = "gazelle-bin",
+    languages = [
+        "@bazel_gazelle//language/go",
+        "@bazel_gazelle//language/proto",
+    ],
+)
+
+gazelle(
+    name = "gazelle",
+    gazelle = ":gazelle-bin",
+)
+
+# gazelle:proto file
